@@ -62,7 +62,8 @@
   /* ---------- The 4x6 thermal label ---------- */
   .stage{display:flex;justify-content:center;}
   .label{
-    width:4in;min-height:6in;background:#fff;color:#000;padding:0.13in 0.2in;
+    width:4in;height:6in;background:#fff;color:#000;padding:0.13in 0.2in;
+    display:flex;flex-direction:column;
     font-family:"Courier New",ui-monospace,Menlo,Consolas,monospace;
     border:1px solid #111;box-shadow:0 6px 22px rgba(0,0,0,.16);
   }
@@ -81,8 +82,9 @@
   .plate-box{border:2.5px solid #000;padding:5px 8px 7px;margin:6px 0;text-align:center;}
   .plate-box .sk{text-align:center;}
   .plate{font-size:30px;font-weight:800;letter-spacing:5px;line-height:1;}
-  .photo-frame{border:1.5px solid #000;height:1.1in;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:3px;background:#fff;}
-  .photo-frame img{display:none;width:100%;height:100%;object-fit:cover;}
+  .photo-seg{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;}
+  .photo-frame{flex:1 1 auto;min-height:0.6in;border:1.5px solid #000;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:3px;background:#fff;}
+  .photo-frame img{display:none;width:100%;height:100%;object-fit:contain;}
   .photo-frame .ph{font-size:10px;color:#333;padding:16px;text-align:center;}
   .body-txt{font-size:11px;font-weight:700;text-align:center;margin:7px 0 0;line-height:1.3;}
   .tow{font-size:11px;text-align:center;margin:6px 0 0;line-height:1.32;}
@@ -179,7 +181,7 @@
           <div class="plate" id="oPlate">— — —</div>
         </div>
 
-        <div class="seg">
+        <div class="seg photo-seg">
           <div class="sk">VEHICLE / PLATE PHOTO</div>
           <div class="photo-frame">
             <img id="oImg" alt="vehicle photo">
